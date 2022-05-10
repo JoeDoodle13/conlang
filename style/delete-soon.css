@@ -1,0 +1,160 @@
+
+
+.title {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 10px 40px;
+    margin: 30px 0;
+    background-color: aliceblue;
+    flex-basis: 1000px;
+}
+
+h1, h2 {
+    color: rgb(48,125,176);
+    margin: 0 20px;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 1000;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.content,
+.content_title,
+.flex-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* 
+the Container for the Text
+*/
+.flex-container {
+    flex-basis: 800px;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+details.word-definition {
+    padding: 20px 30px;
+    display: inline-flex;
+    list-style-type: none;
+}
+
+
+/* 
+the Text itself, WORDS, SUMMARY
+*/
+a {
+    text-decoration: none;
+}
+
+a.word {
+    color: rgb(45, 95, 128);
+    font-weight: bold;
+    font-size: 27px;
+}
+
+hr {
+    height: 1px;
+    background-color: rgb(109, 168, 202);
+    border: none;
+}
+
+section.word-definition {
+    color: rgb(109, 168, 202);
+}
+
+summary::before {
+    content: "#";
+    color: rgb(109, 168, 202);
+    margin-right: 10px;
+} summary {
+    list-style-type:none;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+the FOOTER, other
+ */
+footer {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* .toPage-buttons {
+    border: rgb(45, 95, 128) 1px solid;
+    height: 100px;
+    float:
+} */
+
+
+
+.toPage-buttons {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    top: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    pointer-events: none;
+}
+
+a.button {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1px;
+    color: rgb(121, 178, 228);
+    background-color: white;
+    font-size: 20px;
+    height: 100px;
+    width: 30px;
+    pointer-events: auto;
+    /* margin: 0 10px; */
+} 
+a.button:hover {
+    background-color: rgb(48,125,176);
+    color: white;
+    font-weight: bold;
+}
+

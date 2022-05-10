@@ -1,76 +1,141 @@
 
-body {
-    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 20px;
-}
 
+
+/* <div class="flex-container flex-container_title">
+<div class="title">
+    <h1>Placeholder</h1>
+    <h2>lang 1</h2>
+
+<main>
+<div class="flex-container outer">
+<div class="flex-container inner">
+    <div class="content word-definition">
+        <details class="word-definition">
+            <summary><a href="#" class="word">word</a></summary>
+            <hr>
+            <p class="definition"> */
+
+
+
+
+/* 
+testing, like checking boundaries
+ */
+
+/* .flex-container,
+.content,
 .title {
+    border: black solid 1px;
+} */
+
+.flex-container.inner {
+    /* border: 2px orangered solid; */
+}
+
+.content {
+    /* background-color: aliceblue; */
+}
+
+
+
+
+colors {
+    color: rgb(109, 168, 202);
+    color: rgb(45, 95, 128);
+}
+
+
+
+
+        
+/* 
+the structure of the page
+ */
+
+.flex-container.outer {
+    margin: 50px 0;
+}
+
+.title-container {
+    width: 1000px;
+}
+.flex-container.inner {
+    width: 900px;
+}
+
+.flex-container,
+.content {
     display: flex;
+    justify-content: center;
+}
+
+.content {
+    padding: 10px;
+    width: 100%;
     flex-direction: column;
-    padding: 10px 10px 10px 40px;
-    margin: 30px 0;
+    justify-content: left;
+    margin: 0 20px 0 40px;
+}
+
+
+
+
+
+
+/* 
+content such as text and title
+ */
+
+header,
+section.grammar {
     background-color: aliceblue;
-    flex-basis: 1000px;
+    box-shadow: 0 0 2px 0 teal;
+    margin-top: 50px;
 }
 
-h1, h2 {
-    color: rgb(48,125,176);
-    margin: 0 20px;
+.title-container {
+    padding: 10px 10px 10px 70px;
 }
 
-h1 {
+
+h1, 
+a.title,
+h2 {
+    margin: 0;
+}
+
+h1,
+a.title {
     font-size: 100px;
     font-weight: 1000;
 }
 
 h2 {
     font-size: 40px;
-    font-weight: 500;
-}
-
-.content,
-.content_title,
-.flex-container {
-    display: flex;
-    justify-content: center;
-}
-
-/* check boundaries */
-.title, 
-.content,
-.content_title,
-.flex-container {
-    border: 1px black solid;
+    font-weight: 100;
 }
 
 
-/* 
-the Container for the Text
-*/
-.flex-container {
-    flex-basis: 800px;
-    flex-direction: column;
-    padding-top: 10px;
-}
 
-details.word-definition {
-    padding: 20px 30px;
-    display: inline-flex;
-    list-style-type: none;
+body {
+    font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(109, 168, 202);
+    font-size: 20px;
+    margin: 0
 }
 
 
-/* 
-the Text itself, WORDS, SUMMARY
-*/
+
 a {
     text-decoration: none;
-}
-
-a.word {
-    color: rgb(45, 95, 128);
     font-weight: bold;
     font-size: 27px;
+} a.word,
+h1, h2, a.title {
+    color: rgb(45, 95, 128);
+} a.word:hover,
+a.title:hover {
+    color: rgb(136, 211, 255);
 }
 
 hr {
@@ -79,23 +144,26 @@ hr {
     border: none;
 }
 
-section.word-definition {
-    color: rgb(109, 168, 202);
-}
 
 summary::before {
     content: "#";
-    color: rgb(109, 168, 202);
     margin-right: 10px;
 } summary {
     list-style-type:none;
+    margin-bottom: 20px;
 } 
+
+
+
+
+
+
 
 
 /* 
 the FOOTER, other
  */
-footer {
+ footer {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -107,24 +175,31 @@ footer {
     align-items: center;
 }
 
-/* .toPage-buttons {
-    border: rgb(45, 95, 128) 1px solid;
-    height: 100px;
-    float:
-} */
 
-
-
-.toPage-buttons {
+.toPage-buttons_container {
     position: fixed;
+    padding: 0 3px;
     top: 0;
     bottom: 0;
-    top: 50%;
+    top: 40%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    pointer-events: none;
+}
+
+.toPage-buttons {
     display: flex;
     text-align: center;
     justify-content: space-between;
-    width: 100%;
+    width: 99.3%;
     pointer-events: none;
+}
+
+button {
+    display: flex;
+    border: none;
 }
 
 a.button {
@@ -137,7 +212,7 @@ a.button {
     background-color: white;
     font-size: 20px;
     height: 100px;
-    width: 30px;
+    width: 40px;
     pointer-events: auto;
     /* margin: 0 10px; */
 } 
@@ -147,3 +222,17 @@ a.button:hover {
     font-weight: bold;
 }
 
+.shuffle-container {
+    display: flex;
+    gap: 5px;
+}
+
+button.shuffle {
+    background-color: transparent;
+}
+
+#shuffle-img {
+    width: 50px;
+    height: auto;
+    border: none;
+}
